@@ -274,7 +274,7 @@ public class WorldFileData
 			return (
 				   file.exists()
 				&& file.isDirectory()
-				&& file.getName().toLowerCase().startsWith("dim")
+				&& (file.getName().toLowerCase().startsWith("dim") || file.getName().toLowerCase().equalsIgnoreCase("custom"))
 				);
 		}
 	}
